@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import StockDetailPage from "./Pages/StockDetailPage";
+import StockOverviewPage from "./Pages/StockOverviewPage";
+import ContextProvider from "./Context/ContextProvider";
+import SiteHeader from "./Components/SiteHeader";
+import AboutPage from "./Pages/AboutPage";
 
 function App() {
+
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ContextProvider>
+      <SiteHeader/> 
+      <div className="content">
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<StockOverviewPage/>}/>
+                <Route path="/detail/:symbol" element={<StockDetailPage/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
+              </Routes>
+            </BrowserRouter>
+      </div>
+      </ContextProvider>
     </div>
   );
 }
