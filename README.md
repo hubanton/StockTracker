@@ -5,3 +5,5 @@ The project was bootstraped with the Create React App (https://github.com/facebo
 All Stock data is taken from the Finnhub API (https://finnhub.io/docs/api/introduction).
 
 Styling was done with Bootstrap 5.2 (https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+
+The deployed app can be found here: https://hubanton.github.io/StockTracker

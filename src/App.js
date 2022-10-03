@@ -2,7 +2,6 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import StockDetailPage from "./Pages/StockDetailPage";
 import StockOverviewPage from "./Pages/StockOverviewPage";
 import ContextProvider from "./Context/ContextProvider";
-import SiteHeader from "./Components/SiteHeader";
 import AboutPage from "./Pages/AboutPage";
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
   return (
     <div>
       <ContextProvider>
-      <SiteHeader/> 
-      <div className="content">
+      <div>
             <BrowserRouter>
               <Routes>
                 <Route path="/StockTracker/" element={<StockOverviewPage/>}/>

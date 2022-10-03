@@ -5,9 +5,12 @@ import { Button } from 'react-bootstrap';
 import { BsGraphUp, BsLightbulb, BsLightbulbOff } from 'react-icons/bs';
 import { useContext } from 'react';
 import { Context } from '../Context/ContextProvider';
+import { useNavigate } from 'react-router';
 
 
 export default function SiteHeader() {
+
+  const navigate = useNavigate()
 
   const {theme, changeTheme} = useContext(Context)
 
@@ -16,7 +19,7 @@ export default function SiteHeader() {
   return (
     <Navbar bg={theme} variant={theme}>
       <Container>
-        <Navbar.Brand href="/StockTracker">
+        <Navbar.Brand style={{cursor: "pointer"}} onClick={() => {navigate("/StockTracker")}}>
           <BsGraphUp style={{
             width: "30",
             height: "30",
@@ -28,7 +31,7 @@ export default function SiteHeader() {
           Stock Tracker
         </Navbar.Brand>
         <Nav className="justify-content-end">
-          <Nav.Link href="/StockTracker/about">About</Nav.Link>        
+          <Nav.Link style={{cursor: "pointer"}} onClick={() => {navigate("/StockTracker/about")}}>About</Nav.Link>        
               <Button
                 style={{marginLeft: "12px"}}
                 onClick={() => {
