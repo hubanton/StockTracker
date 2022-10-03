@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/StockTracker/static/css/main.16978ad1.css",
-    "main.js": "/StockTracker/static/js/main.bc20c3eb.js",
+    "main.js": "/StockTracker/static/js/main.3253b859.js",
     "index.html": "/StockTracker/index.html",
     "main.16978ad1.css.map": "/StockTracker/static/css/main.16978ad1.css.map",
-    "main.bc20c3eb.js.map": "/StockTracker/static/js/main.bc20c3eb.js.map"
+    "main.3253b859.js.map": "/StockTracker/static/js/main.3253b859.js.map"
   },
   "entrypoints": [
     "static/css/main.16978ad1.css",
-    "static/js/main.bc20c3eb.js"
+    "static/js/main.3253b859.js"
   ]
 }
