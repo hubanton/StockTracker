@@ -16,9 +16,9 @@ function App() {
       <div className="content">
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<StockOverviewPage/>}/>
-                <Route path="/detail/:symbol" element={<StockDetailPage/>}/>
-                <Route path="/about" element={<AboutPage/>}/>
+                <Route path="/StockTracker/" element={<StockOverviewPage/>}/>
+                <Route path="StockTracker/detail/:symbol" element={<StockDetailPage/>}/>
+                <Route path="StockTracker/about" element={<AboutPage/>}/>
               </Routes>
             </BrowserRouter>
       </div>

@@ -16,7 +16,7 @@ export default function SiteHeader() {
   return (
     <Navbar bg={theme} variant={theme}>
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/StockTracker">
           <BsGraphUp style={{
             width: "30",
             height: "30",
@@ -28,7 +28,7 @@ export default function SiteHeader() {
           Stock Tracker
         </Navbar.Brand>
         <Nav className="justify-content-end">
-          <Nav.Link href="/about">About</Nav.Link>        
+          <Nav.Link href="/StockTracker/about">About</Nav.Link>        
               <Button
                 style={{marginLeft: "12px"}}
                 onClick={() => {
