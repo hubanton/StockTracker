@@ -18,7 +18,9 @@ export default function AutoComplete() {
                     }
                 })
                 if (isMounted) {
-                    setResults(response.data.result)
+                    // Basically avoids providing any Stock that is not from US Markets
+                    const filteredResults = response.data.result.filter(e => e.symbol.indexOf(".") === -1)
+                    setResults(filteredResults)
                 }
             } catch (err) {
                 console.log(err)
@@ -38,6 +40,7 @@ export default function AutoComplete() {
 
     function renderDropdown() {
         const dropDownClass = search && "show"
+        console.log(results[0])
         return (
             <Dropdown.Menu
                 style={{height: "500px",
